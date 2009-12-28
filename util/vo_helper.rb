@@ -31,9 +31,9 @@ module RubyAMF
               return assumed_class
             else
               case ClassMappings.hash_key_access
-              when :symbol      : return Hash
-              when :string      : return Hash
-              when :indifferent : return HashWithIndifferentAccess
+              when :symbol      then return Hash
+              when :string      then return Hash
+              when :indifferent then return HashWithIndifferentAccess
               end
             end            
           end
@@ -118,9 +118,9 @@ module RubyAMF
           return ruby_obj
         else
           case ClassMappings.hash_key_access
-          when :symbol      : return obj.symbolize_keys!
-          when :string      : return obj # by default the keys are a string type, so just return the obj
-          when :indifferent : return HashWithIndifferentAccess.new(obj)
+          when :symbol      then return obj.symbolize_keys!
+          when :string      then return obj # by default the keys are a string type, so just return the obj
+          when :indifferent then return HashWithIndifferentAccess.new(obj)
           # else  # TODO: maybe add a raise FlexError since they somehow put the wrong value for this feature
           end
         end

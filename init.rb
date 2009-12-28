@@ -3,7 +3,7 @@ $:.unshift(File.expand_path(RAILS_ROOT) + '/vendor/plugins/rubyamf/')
 #utils must be first
 require 'util/string'
 require 'util/vo_helper'
-require 'util/active_record'
+#require 'util/active_record'
 require 'util/action_controller'
 require 'app/mime_type'
 require 'app/fault_object'
